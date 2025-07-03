@@ -19,8 +19,22 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 # Boto3 & Tavily Client Initialization
+# try:
+#     bedrock_runtime = boto3.client(service_name='bedrock-runtime', region_name='ap-southeast-1')
+#     tavily_client = TavilyClient(api_key=st.secrets["TAVILY_API_KEY"])
+# except Exception as e:
+#     st.error(f"Error initializing clients: {e}")
+#     st.stop()
+
 try:
-    bedrock_runtime = boto3.client(service_name='bedrock-runtime', region_name='ap-southeast-1')
+    # Initialize Boto3 client with credentials from Streamlit's secrets
+    bedrock_runtime = boto3.client(
+        service_name='bedrock-runtime',
+        region_name='ap-southeast-1',
+        aws_access_key_id=st.secrets["AWS_ACCESS_KEY_ID"],
+        aws_secret_access_key=st.secrets["AWS_SECRET_ACCESS_KEY"]
+    )
+    # Initialize Tavily client
     tavily_client = TavilyClient(api_key=st.secrets["TAVILY_API_KEY"])
 except Exception as e:
     st.error(f"Error initializing clients: {e}")
