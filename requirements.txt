@@ -1,0 +1,13 @@
+# requirements.txt
+
+# Core framework for the web application
+streamlit==1.46.1
+
+# AWS SDK for Python to communicate with Bedrock
+boto3==1.39.2
+
+# Python client for the Tavily Search API
+tavily-python==0.7.8
+
+# Used by Streamlit for image processing (st.image, st.file_uploader)
+Pillow==11.1.0

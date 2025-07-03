@@ -1,0 +1,70 @@
+# .gitignore
+
+# ----------------------------------------------------------------
+# 1. SECRETS (MOST IMPORTANT)
+# Ignore Streamlit secrets file and other common secret formats
+# ----------------------------------------------------------------
+.streamlit/secrets.toml
+*.env
+
+
+# ----------------------------------------------------------------
+# 2. PYTHON VIRTUAL ENVIRONMENTS
+# Ignore virtual environment folders
+# ----------------------------------------------------------------
+venv/
+.venv/
+env/
+ENV/
+*.venv
+
+
+# ----------------------------------------------------------------
+# 3. PYTHON CACHE & COMPILED FILES
+# Ignore bytecode and cache directories
+# ----------------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+# ----------------------------------------------------------------
+# 4. IDE & EDITOR CONFIGURATION
+# Ignore settings from popular editors like VSCode and PyCharm
+# ----------------------------------------------------------------
+.vscode/
+.idea/
+
+
+# ----------------------------------------------------------------
+# 5. OPERATING SYSTEM FILES
+# Ignore metadata files from macOS and Windows
+# ----------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# ----------------------------------------------------------------
+# 6. LOGS & DATA
+# Ignore log files and any large data files you might use for testing
+# ----------------------------------------------------------------
+*.log
+*.csv
+*.db
+*.sqlite3
+# You can also ignore user-uploaded test media if they are not part of the app's source
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+
+# ----------------------------------------------------------------
+# 7. PYTHON PACKAGING & BUILD ARTIFACTS
+# Ignore files related to building Python packages
+# ----------------------------------------------------------------
+build/
+dist/
+*.egg-info/
